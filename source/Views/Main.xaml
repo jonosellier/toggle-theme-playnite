@@ -934,102 +934,99 @@
                                     </StackPanel>
                                 </ButtonEx>
                                 <TextBlock
-                                    Margin="0,64,0,16"
+                                    Margin="0,64,0,8"
                                     Style="{DynamicResource TextBlockBaseStyle}"
                                     Text="{DynamicResource LOCStorage}" />
                                 <ItemsControl Focusable="False" ItemsSource="{PluginSettings Plugin=MoData, Path=DiskUsages}">
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
-                                            <Grid Margin="0,8,0,8" Visibility="{Binding Converter={StaticResource NullToVisibilityConverter}}">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="80" />
-                                                    <ColumnDefinition Width="*" />
-                                                </Grid.ColumnDefinitions>
+                                            <ButtonEx Command="{Binding SelectCommand}" Margin="0,16,0,0">
+                                                <Grid Visibility="{Binding Converter={StaticResource NullToVisibilityConverter}}" HorizontalAlignment="Stretch">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="80" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
 
-                                                <!--  Letter and Capacity  -->
-                                                <StackPanel
-                                                    Grid.Column="0"
-                                                    Margin="0,0,16,0"
-                                                    VerticalAlignment="Center"
-                                                    Orientation="Vertical">
-                                                    <TextBlock
-                                                        HorizontalAlignment="Left"
-                                                        FontSize="32"
-                                                        FontWeight="Bold"
-                                                        Foreground="{DynamicResource TextBrush}"
-                                                        Text="{Binding Label, Mode=OneWay}" />
-
-                                                    <TextBlock
-                                                        HorizontalAlignment="Left"
-                                                        FontSize="14"
-                                                        FontWeight="SemiBold"
-                                                        Foreground="{DynamicResource TextBrush}"
-                                                        Opacity="0.75"
-                                                        Text="{Binding TotalSpaceString, Mode=OneWay}" />
-                                                </StackPanel>
-
-                                                <!--  Disk Info  -->
-                                                <StackPanel Grid.Column="1" Margin="0,8,0,8">
-                                                    <Grid>
-                                                        <Grid.ColumnDefinitions>
-                                                            <ColumnDefinition Width="Auto" />
-                                                            <ColumnDefinition Width="*" />
-                                                        </Grid.ColumnDefinitions>
+                                                    <!--  Letter and Capacity  -->
+                                                    <StackPanel
+                                                        Grid.Column="0"
+                                                        Margin="0,0,16,0"
+                                                        VerticalAlignment="Center"
+                                                        Orientation="Vertical">
+                                                        <TextBlock
+                                                            HorizontalAlignment="Left"
+                                                            FontSize="32"
+                                                            FontWeight="Bold"
+                                                            Text="{Binding Label, Mode=OneWay}" />
 
                                                         <TextBlock
-                                                            Grid.Column="0"
-                                                            VerticalAlignment="Center"
+                                                            HorizontalAlignment="Left"
                                                             FontSize="14"
-                                                            FontWeight="Bold"
-                                                            Foreground="{DynamicResource TextBrush}"
-                                                            Text="{Binding UsedPercentageString, Mode=OneWay}" />
+                                                            FontWeight="SemiBold"
+                                                            Opacity="0.75"
+                                                            Text="{Binding TotalSpaceString, Mode=OneWay}" />
+                                                    </StackPanel>
 
-                                                        <StackPanel
-                                                            Grid.Column="1"
-                                                            HorizontalAlignment="Right"
-                                                            Orientation="Horizontal">
+                                                    <!--  Disk Info  -->
+                                                    <StackPanel Grid.Column="1" Margin="0,8,0,8">
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="Auto" />
+                                                                <ColumnDefinition Width="*" />
+                                                            </Grid.ColumnDefinitions>
+
                                                             <TextBlock
+                                                                Grid.Column="0"
                                                                 VerticalAlignment="Center"
                                                                 FontSize="14"
-                                                                Foreground="{DynamicResource TextBrush}"
-                                                                Text="{DynamicResource LOCFreeSpace}" />
-                                                            <TextBlock
-                                                                VerticalAlignment="Center"
-                                                                FontSize="14"
-                                                                FontWeight="SemiBold"
-                                                                Foreground="{DynamicResource TextBrush}"
-                                                                Text="{Binding FreeSpaceString, Mode=OneWay}" />
-                                                        </StackPanel>
-                                                    </Grid>
+                                                                FontWeight="Bold"
+                                                                Text="{Binding UsedPercentageString, Mode=OneWay}" />
 
-                                                    <ProgressBar
-                                                        Height="24"
-                                                        Margin="0,4,0,0"
-                                                        HorizontalAlignment="Stretch"
-                                                        Maximum="100"
-                                                        Value="{Binding UsedPercentage, Mode=OneWay}">
-                                                        <ProgressBar.Style>
-                                                            <Style BasedOn="{StaticResource BarRound12}" TargetType="ProgressBar">
-                                                                <Setter Property="Foreground" Value="{DynamicResource SuccessBrush}" />
-                                                                <Style.Triggers>
-                                                                    <DataTrigger Binding="{Binding UsedTenthsInt, Mode=OneWay}" Value="7">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource AlertBrush}" />
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UsedTenthsInt, Mode=OneWay}" Value="8">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource AlertBrush}" />
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UsedTenthsInt, Mode=OneWay}" Value="9">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource WarningBrush}" />
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UsedTenthsInt, Mode=OneWay}" Value="10">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource WarningBrush}" />
-                                                                    </DataTrigger>
-                                                                </Style.Triggers>
-                                                            </Style>
-                                                        </ProgressBar.Style>
-                                                    </ProgressBar>
-                                                </StackPanel>
-                                            </Grid>
+                                                            <StackPanel
+                                                                Grid.Column="1"
+                                                                HorizontalAlignment="Right"
+                                                                Orientation="Horizontal">
+                                                                <TextBlock
+                                                                    VerticalAlignment="Center"
+                                                                    FontSize="14"
+                                                                    Text="{DynamicResource LOCFreeSpace}" />
+                                                                <TextBlock
+                                                                    VerticalAlignment="Center"
+                                                                    FontSize="14"
+                                                                    FontWeight="SemiBold"
+                                                                    Text="{Binding FreeSpaceString, Mode=OneWay}" />
+                                                            </StackPanel>
+                                                        </Grid>
+
+                                                        <ProgressBar
+                                                            Height="24"
+                                                            Margin="0,4,0,0"
+                                                            HorizontalAlignment="Stretch"
+                                                            Maximum="100"
+                                                            Value="{Binding UsedPercentage, Mode=OneWay}">
+                                                            <ProgressBar.Style>
+                                                                <Style BasedOn="{StaticResource BarRound12}" TargetType="ProgressBar">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource SuccessBrush}" />
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding UsedTenthsInt, Mode=OneWay}" Value="7">
+                                                                            <Setter Property="Foreground" Value="{DynamicResource AlertBrush}" />
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding UsedTenthsInt, Mode=OneWay}" Value="8">
+                                                                            <Setter Property="Foreground" Value="{DynamicResource AlertBrush}" />
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding UsedTenthsInt, Mode=OneWay}" Value="9">
+                                                                            <Setter Property="Foreground" Value="{DynamicResource WarningBrush}" />
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding UsedTenthsInt, Mode=OneWay}" Value="10">
+                                                                            <Setter Property="Foreground" Value="{DynamicResource WarningBrush}" />
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </ProgressBar.Style>
+                                                        </ProgressBar>
+                                                    </StackPanel>
+                                                </Grid>
+                                            </ButtonEx>
                                         </DataTemplate>
                                     </ItemsControl.ItemTemplate>
                                 </ItemsControl>
@@ -1047,6 +1044,255 @@
                                             Text="{DynamicResource LOCManageApps}" />
                                     </StackPanel>
                                 </ButtonEx>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MoDataDiskDetailsStyle" TargetType="ContentControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border
+                            Grid.Column="1"
+                            Width="776"
+                            Margin="0,16,0,16"
+                            Padding="0,16,0,0"
+                            HorizontalAlignment="Center"
+                            Background="{DynamicResource OverlayMenuBackgroundBrush}"
+                            BorderBrush="{DynamicResource DefaultBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="16">
+                            <!--  Set initial state for animation  -->
+                            <Border.Opacity>0</Border.Opacity>
+                            <Border.RenderTransform>
+                                <TranslateTransform Y="200" />
+                            </Border.RenderTransform>
+                            <Border.Effect>
+                                <DropShadowEffect
+                                    BlurRadius="10"
+                                    Direction="315"
+                                    Opacity="0.5"
+                                    ShadowDepth="5"
+                                    Color="Black" />
+                            </Border.Effect>
+                            <Border.Triggers>
+                                <!--  Fade in animation on load  -->
+                                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1"
+                                                Duration="0:0:0.2" />
+                                            <DoubleAnimation
+                                                Storyboard.TargetProperty="RenderTransform.(TranslateTransform.Y)"
+                                                To="0"
+                                                Duration="0:0:0.2">
+                                                <DoubleAnimation.EasingFunction>
+                                                    <QuadraticEase EasingMode="EaseOut" />
+                                                </DoubleAnimation.EasingFunction>
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+
+                                <!--  Fade out animation on unload  -->
+                                <EventTrigger RoutedEvent="FrameworkElement.Unloaded">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0"
+                                                Duration="0:0:0.2" />
+                                            <DoubleAnimation
+                                                Storyboard.TargetProperty="RenderTransform.(TranslateTransform.Y)"
+                                                To="200"
+                                                Duration="0:0:0.2">
+                                                <DoubleAnimation.EasingFunction>
+                                                    <QuadraticEase EasingMode="EaseIn" />
+                                                </DoubleAnimation.EasingFunction>
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Border.Triggers>
+                            <StackPanel Orientation="Vertical">
+                                <Grid Margin="16,0,16,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!--  Letter and Capacity  -->
+                                    <StackPanel
+        Grid.Column="0"
+        Margin="0,0,16,0"
+        VerticalAlignment="Center"
+        Orientation="Vertical">
+                                        <TextBlock
+            Foreground="{DynamicResource TextBrush}"
+            HorizontalAlignment="Left"
+            FontSize="32"
+            FontWeight="Bold"
+            Text="{PluginSettings Plugin=MoData, Path=SelectedDisk.Label}" />
+
+                                        <TextBlock 
+            Foreground="{DynamicResource TextBrush}"
+            HorizontalAlignment="Left"
+            FontSize="14"
+            FontWeight="SemiBold"
+            Opacity="0.75"
+            Text="{PluginSettings Plugin=MoData, Path=SelectedDisk.TotalSpaceString}" />
+                                    </StackPanel>
+
+                                    <!--  Disk Info  -->
+                                    <StackPanel Grid.Column="1" Margin="0,8,0,8">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock
+                Foreground="{DynamicResource TextBrush}"
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                FontSize="14"
+                FontWeight="Bold"
+                Text="{PluginSettings Plugin=MoData, Path=SelectedDisk.UsedPercentageString}" />
+
+                                            <StackPanel
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                Orientation="Horizontal">
+                                                <TextBlock
+                    Foreground="{DynamicResource TextBrush}"
+                    VerticalAlignment="Center"
+                    FontSize="14"
+                    Text="{DynamicResource LOCFreeSpace}" />
+                                                <TextBlock
+                    Foreground="{DynamicResource TextBrush}"
+                    VerticalAlignment="Center"
+                    FontSize="14"
+                    FontWeight="SemiBold"
+                    Text="{PluginSettings Plugin=MoData, Path=SelectedDisk.FreeSpaceString}" />
+                                            </StackPanel>
+                                        </Grid>
+
+                                        <ProgressBar
+            Height="24"
+            Margin="0,12,0,0"
+            HorizontalAlignment="Stretch"
+            Maximum="100"
+            Value="{PluginSettings Plugin=MoData, Path=SelectedDisk.UsedPercentage}">
+                                            <ProgressBar.Style>
+                                                <Style BasedOn="{StaticResource BarRound12}" TargetType="ProgressBar">
+                                                    <Setter Property="Foreground" Value="{DynamicResource SuccessBrush}" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=MoData, Path=SelectedDisk.UsedTenthsInt}" Value="7">
+                                                            <Setter Property="Foreground" Value="{DynamicResource AlertBrush}" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=MoData, Path=SelectedDisk.UsedTenthsInt}" Value="8">
+                                                            <Setter Property="Foreground" Value="{DynamicResource AlertBrush}" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=MoData, Path=SelectedDisk.UsedTenthsInt}" Value="9">
+                                                            <Setter Property="Foreground" Value="{DynamicResource WarningBrush}" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=MoData, Path=SelectedDisk.UsedTenthsInt}" Value="10">
+                                                            <Setter Property="Foreground" Value="{DynamicResource WarningBrush}" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </ProgressBar.Style>
+                                        </ProgressBar>
+                                    </StackPanel>
+                                </Grid>
+                                <ListView
+                                    x:Name="GamesList"
+                                    Height="958"
+                                    Width="776"
+                                    HorizontalAlignment="Center"
+                                    pbeh:FocusBahaviors.FocusBinding="True"
+                                    pbeh:FocusBahaviors.OnVisibilityFocus="True"
+                                    Background="Transparent"
+                                    BorderBrush="Transparent"
+                                    BorderThickness="0"
+                                    FocusVisualStyle="{x:Null}"
+                                    Focusable="False"
+                                    ItemsSource="{PluginSettings Plugin=MoData, Path=SelectedDisk.GamesInstalled}" Margin="8,0,8,0"
+                                    VirtualizingPanel.IsVirtualizing="True"
+                                    VirtualizingPanel.VirtualizationMode="Recycling">
+                                    <ListView.ItemContainerStyle>
+                                        <Style TargetType="ListViewItem">
+                                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                            <Setter Property="Focusable" Value="False" />
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="ListViewItem">
+
+                                                        <ButtonEx Command="{Binding SelectCommand}" Margin="16,12">
+                                                            <StackPanel Orientation="Vertical">
+                                                                <TextBlock
+                        FontSize="36"
+                        FontWeight="SemiBold"
+                        Text="{Binding Name}"
+                        TextTrimming="CharacterEllipsis" />
+
+                                                                <Grid Margin="0,4,0,0" Width="700">
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition Width="64" />
+                                                                        <ColumnDefinition Width="*" />
+                                                                    </Grid.ColumnDefinitions>
+
+                                                                    <!-- Install Size Text -->
+                                                                    <TextBlock
+                            Grid.Column="0"
+                            FontSize="16"
+                            Opacity="0.75"
+                            Text="{Binding InstallSizeString}"
+                            VerticalAlignment="Center"
+                            Margin="0,0,8,0" />
+
+                                                                    <!-- Overlayed Progress Bars -->
+                                                                    <Grid Grid.Column="1" VerticalAlignment="Center">
+                                                                        <!-- Background Progress Bar (Total Disk Size) -->
+                                                                        <ProgressBar
+                                                            Height="24"
+                                Style="{StaticResource BarRound12}"
+                                Maximum="100"
+            Value="{PluginSettings Plugin=MoData, Path=SelectedDisk.UsedPercentage}"
+                                Background="Transparent"
+                                Foreground="#60808080" />
+
+                                                                        <!-- Foreground Progress Bar (Game Usage) -->
+                                                                        <ProgressBar
+                                                            Height="24"
+                                Style="{StaticResource BarRound12}"
+                                Maximum="{PluginSettings Plugin=MoData, Path=SelectedDisk.TotalSpace}"
+                                Value="{Binding InstallSize}"
+                                Background="Transparent"
+                                Foreground="{DynamicResource SuccessBrush}" />
+                                                                    </Grid>
+                                                                </Grid>
+                                                            </StackPanel>
+                                                        </ButtonEx>
+
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </ListView.ItemContainerStyle>
+                                </ListView>
                             </StackPanel>
                         </Border>
                     </Grid>
