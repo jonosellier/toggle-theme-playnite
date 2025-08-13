@@ -1319,6 +1319,7 @@
                         <ContentControl x:Name="ThemeOptions_Command" Focusable="False" />
                         <CheckBox
                             x:Name="CbChangeLayout"
+                            Focusable="False"
                             IsChecked="{Settings Fullscreen.HorizontalLayout,
                                                  Mode=TwoWay}"
                             Opacity="0" />
@@ -1398,6 +1399,48 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <StackPanel.Style>
+                                    <Style TargetType="StackPanel">
+                                        <Setter Property="Margin" Value="98,28,0,-78" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Settings Fullscreen.HorizontalLayout}" Value="False">
+                                                <Setter Property="Margin" Value="56,0,0,0" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </StackPanel.Style>
+                                <Image
+                                    x:Name="DefaultImage"
+                                    Width="40"
+                                    Height="40"
+                                    Margin="0,-4"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Opacity="0.67"
+                                    RenderOptions.BitmapScalingMode="Fant"
+                                    Source="{ThemeFileBinding ActiveFilterPreset.Name,
+                                                              PathFormat='Icons/Filter/{0}.png'}"
+                                    Stretch="Uniform">
+                                    <Image.Style>
+                                        <Style TargetType="Image">
+                                            <Setter Property="Opacity" Value="1" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Source}" Value="{x:Null}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                </Image>
+                                <TextBlock
+                                    Margin="16,0,0,0"
+                                    VerticalAlignment="Center"
+                                    FontSize="32"
+                                    FontWeight="Bold"
+                                    Style="{DynamicResource TextBlockBaseStyle}"
+                                    Text="{Binding ActiveFilterPreset.Name}" />
+                            </StackPanel>
                             <Grid Grid.Row="3" Margin="0">
                                 <Grid.Style>
                                     <Style TargetType="Grid">

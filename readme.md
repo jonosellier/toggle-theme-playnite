@@ -58,6 +58,7 @@ Technically you can do whatever you want but the them looks and functions best w
 
 - ExtraMetadataLoader
 - Now Playing
+- MoData
 
 ## Setting up filter names
 

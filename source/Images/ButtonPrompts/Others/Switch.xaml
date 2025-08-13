@@ -4,61 +4,61 @@
 	xmlns:pmrk="clr-namespace:Playnite.FullscreenApp.Markup;assembly=Playnite.FullscreenApp">
 	<DataTemplate x:Key="ButtonPromptA">
 		<Viewbox>
-			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptA.png'}" />
+			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptA.png'}" Opacity="0.7" />
 		</Viewbox>
 	</DataTemplate>
 
 	<DataTemplate x:Key="ButtonPromptB">
 		<Viewbox>
-			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptB.png'}" />
+			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptB.png'}" Opacity="0.7"/>
 		</Viewbox>
 	</DataTemplate>
 
 	<DataTemplate x:Key="ButtonPromptX">
 		<Viewbox>
-			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptX.png'}" />
+			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptX.png'}" Opacity="0.7"/>
 		</Viewbox>
 	</DataTemplate>
 
 	<DataTemplate x:Key="ButtonPromptY">
 		<Viewbox>
-			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptY.png'}" />
+			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptY.png'}" Opacity="0.7"/>
 		</Viewbox>
 	</DataTemplate>
 
 	<DataTemplate x:Key="ButtonPromptLB">
 		<Viewbox>
-			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptLB.png'}" />
+			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptLB.png'}"/>
 		</Viewbox>
 	</DataTemplate>
 
 	<DataTemplate x:Key="ButtonPromptRB">
 		<Viewbox>
-			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptRB.png'}" />
+			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptRB.png'}"/>
 		</Viewbox>
 	</DataTemplate>
 
 	<DataTemplate x:Key="ButtonPromptLT">
 		<Viewbox>
-			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptLT.png'}" />
+			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptLT.png'}"/>
 		</Viewbox>
 	</DataTemplate>
 
 	<DataTemplate x:Key="ButtonPromptRT">
 		<Viewbox>
-			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptRT.png'}" />
+			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptRT.png'}"/>
 		</Viewbox>
 	</DataTemplate>
 
 	<DataTemplate x:Key="ButtonPromptBack">
 		<Viewbox>
-			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptBack.png'}" />
+			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptBack.png'}" Opacity="0.7"/>
 		</Viewbox>
 	</DataTemplate>
 
 	<DataTemplate x:Key="ButtonPromptStart">
 		<Viewbox>
-			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptStart.png'}" />
+			<Image RenderOptions.BitmapScalingMode="Fant" Source="{pmrk:ThemeFile 'Images/Buttons/Switch/ButtonPromptStart.png'}" Opacity="0.7"/>
 		</Viewbox>
 	</DataTemplate>
 </ResourceDictionary>

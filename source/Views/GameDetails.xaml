@@ -33,7 +33,7 @@
                                     Foreground="White"
                                     Style="{DynamicResource TextBlockBaseStyle}"
                                     Text="{Binding SelectedGame.DisplayName}"
-                                    TextWrapping="Wrap"/>
+                                    TextWrapping="Wrap" />
                                 <StackPanel Margin="0,0,0,32" Orientation="Horizontal">
                                     <TextBlock
                                         Margin="0,0,12,0"
@@ -734,18 +734,20 @@
                                     <ButtonEx.Style>
                                         <Style BasedOn="{StaticResource ButtonBig}" TargetType="ButtonEx">
                                             <Setter Property="Visibility" Value="Visible" />
-                                            <!--<Style.Triggers>
-                                                <DataTrigger Binding="{Binding Game.IsRunning}"
-                                                    Value="True">
-                                                    <Setter Property="Visibility"
-                                                        Value="Collapsed"/>
-                                                </DataTrigger>
-                                            </Style.Triggers>-->
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{PluginStatus Plugin=NowPlaying_db4e7ade-57fb-426c-8392-60e2347a0209, Status=Installed}" Value="True" />
+                                                        <Condition Binding="{Binding Game.IsRunning}" Value="True" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
                                         </Style>
                                     </ButtonEx.Style>
                                 </ButtonEx>
                                 <ButtonEx
-                                    Margin="32,2,2,2"
+                                    Margin="0,2,2,2"
                                     BorderThickness="2"
                                     Command="{PluginSettings Plugin=NowPlaying,
                                                              Path=ReturnToGame}">
@@ -754,6 +756,9 @@
                                             <Setter Property="Visibility" Value="Visible" />
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding Game.IsRunning}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{PluginStatus Plugin=NowPlaying_db4e7ade-57fb-426c-8392-60e2347a0209, Status=Installed}" Value="False">
                                                     <Setter Property="Visibility" Value="Collapsed" />
                                                 </DataTrigger>
                                             </Style.Triggers>
@@ -771,6 +776,9 @@
                                             <Setter Property="Visibility" Value="Visible" />
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding Game.IsRunning}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{PluginStatus Plugin=NowPlaying_db4e7ade-57fb-426c-8392-60e2347a0209, Status=Installed}" Value="False">
                                                     <Setter Property="Visibility" Value="Collapsed" />
                                                 </DataTrigger>
                                             </Style.Triggers>
