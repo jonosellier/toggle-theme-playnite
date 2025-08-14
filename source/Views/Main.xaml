@@ -940,8 +940,8 @@
                                 <ItemsControl Focusable="False" ItemsSource="{PluginSettings Plugin=MoData, Path=DiskUsages}">
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
-                                            <ButtonEx Command="{Binding SelectCommand}" Margin="0,16,0,0">
-                                                <Grid Visibility="{Binding Converter={StaticResource NullToVisibilityConverter}}" HorizontalAlignment="Stretch">
+                                            <ButtonEx Margin="0,16,0,0" Command="{Binding SelectCommand}">
+                                                <Grid HorizontalAlignment="Stretch" Visibility="{Binding Converter={StaticResource NullToVisibilityConverter}}">
                                                     <Grid.ColumnDefinitions>
                                                         <ColumnDefinition Width="80" />
                                                         <ColumnDefinition Width="*" />
@@ -987,6 +987,7 @@
                                                                 HorizontalAlignment="Right"
                                                                 Orientation="Horizontal">
                                                                 <TextBlock
+                                                                    Margin="0,0,6,0"
                                                                     VerticalAlignment="Center"
                                                                     FontSize="14"
                                                                     Text="{DynamicResource LOCFreeSpace}" />
@@ -999,6 +1000,7 @@
                                                         </Grid>
 
                                                         <ProgressBar
+                                                            Width="440"
                                                             Height="24"
                                                             Margin="0,4,0,0"
                                                             HorizontalAlignment="Stretch"
@@ -1135,24 +1137,26 @@
 
                                     <!--  Letter and Capacity  -->
                                     <StackPanel
-        Grid.Column="0"
-        Margin="0,0,16,0"
-        VerticalAlignment="Center"
-        Orientation="Vertical">
+                                        Grid.Column="0"
+                                        Margin="0,0,16,0"
+                                        VerticalAlignment="Center"
+                                        Orientation="Vertical">
                                         <TextBlock
-            Foreground="{DynamicResource TextBrush}"
-            HorizontalAlignment="Left"
-            FontSize="32"
-            FontWeight="Bold"
-            Text="{PluginSettings Plugin=MoData, Path=SelectedDisk.Label}" />
+                                            HorizontalAlignment="Left"
+                                            FontSize="32"
+                                            FontWeight="Bold"
+                                            Foreground="{DynamicResource TextBrush}"
+                                            Text="{PluginSettings Plugin=MoData,
+                                                                  Path=SelectedDisk.Label}" />
 
-                                        <TextBlock 
-            Foreground="{DynamicResource TextBrush}"
-            HorizontalAlignment="Left"
-            FontSize="14"
-            FontWeight="SemiBold"
-            Opacity="0.75"
-            Text="{PluginSettings Plugin=MoData, Path=SelectedDisk.TotalSpaceString}" />
+                                        <TextBlock
+                                            HorizontalAlignment="Left"
+                                            FontSize="14"
+                                            FontWeight="SemiBold"
+                                            Foreground="{DynamicResource TextBrush}"
+                                            Opacity="0.75"
+                                            Text="{PluginSettings Plugin=MoData,
+                                                                  Path=SelectedDisk.TotalSpaceString}" />
                                     </StackPanel>
 
                                     <!--  Disk Info  -->
@@ -1164,37 +1168,41 @@
                                             </Grid.ColumnDefinitions>
 
                                             <TextBlock
-                Foreground="{DynamicResource TextBrush}"
-                Grid.Column="0"
-                VerticalAlignment="Center"
-                FontSize="14"
-                FontWeight="Bold"
-                Text="{PluginSettings Plugin=MoData, Path=SelectedDisk.UsedPercentageString}" />
+                                                Grid.Column="0"
+                                                VerticalAlignment="Center"
+                                                FontSize="14"
+                                                FontWeight="Bold"
+                                                Foreground="{DynamicResource TextBrush}"
+                                                Text="{PluginSettings Plugin=MoData,
+                                                                      Path=SelectedDisk.UsedPercentageString}" />
 
                                             <StackPanel
-                Grid.Column="1"
-                HorizontalAlignment="Right"
-                Orientation="Horizontal">
+                                                Grid.Column="1"
+                                                HorizontalAlignment="Right"
+                                                Orientation="Horizontal">
                                                 <TextBlock
-                    Foreground="{DynamicResource TextBrush}"
-                    VerticalAlignment="Center"
-                    FontSize="14"
-                    Text="{DynamicResource LOCFreeSpace}" />
+                                                    Margin="0,0,6,0"
+                                                    VerticalAlignment="Center"
+                                                    FontSize="14"
+                                                    Foreground="{DynamicResource TextBrush}"
+                                                    Text="{DynamicResource LOCFreeSpace}" />
                                                 <TextBlock
-                    Foreground="{DynamicResource TextBrush}"
-                    VerticalAlignment="Center"
-                    FontSize="14"
-                    FontWeight="SemiBold"
-                    Text="{PluginSettings Plugin=MoData, Path=SelectedDisk.FreeSpaceString}" />
+                                                    VerticalAlignment="Center"
+                                                    FontSize="14"
+                                                    FontWeight="SemiBold"
+                                                    Foreground="{DynamicResource TextBrush}"
+                                                    Text="{PluginSettings Plugin=MoData,
+                                                                          Path=SelectedDisk.FreeSpaceString}" />
                                             </StackPanel>
                                         </Grid>
 
                                         <ProgressBar
-            Height="24"
-            Margin="0,12,0,0"
-            HorizontalAlignment="Stretch"
-            Maximum="100"
-            Value="{PluginSettings Plugin=MoData, Path=SelectedDisk.UsedPercentage}">
+                                            Height="24"
+                                            Margin="0,12,0,0"
+                                            HorizontalAlignment="Stretch"
+                                            Maximum="100"
+                                            Value="{PluginSettings Plugin=MoData,
+                                                                   Path=SelectedDisk.UsedPercentage}">
                                             <ProgressBar.Style>
                                                 <Style BasedOn="{StaticResource BarRound12}" TargetType="ProgressBar">
                                                     <Setter Property="Foreground" Value="{DynamicResource SuccessBrush}" />
@@ -1219,8 +1227,9 @@
                                 </Grid>
                                 <ListView
                                     x:Name="GamesList"
-                                    Height="958"
                                     Width="776"
+                                    Height="958"
+                                    Margin="8,0,8,0"
                                     HorizontalAlignment="Center"
                                     pbeh:FocusBahaviors.FocusBinding="True"
                                     pbeh:FocusBahaviors.OnVisibilityFocus="True"
@@ -1229,7 +1238,8 @@
                                     BorderThickness="0"
                                     FocusVisualStyle="{x:Null}"
                                     Focusable="False"
-                                    ItemsSource="{PluginSettings Plugin=MoData, Path=SelectedDisk.GamesInstalled}" Margin="8,0,8,0"
+                                    ItemsSource="{PluginSettings Plugin=MoData,
+                                                                 Path=SelectedDisk.GamesInstalled}"
                                     VirtualizingPanel.IsVirtualizing="True"
                                     VirtualizingPanel.VirtualizationMode="Recycling">
                                     <ListView.ItemContainerStyle>
@@ -1240,48 +1250,50 @@
                                                 <Setter.Value>
                                                     <ControlTemplate TargetType="ListViewItem">
 
-                                                        <ButtonEx Command="{Binding SelectCommand}" Margin="16,12">
+                                                        <ButtonEx Margin="16,24,16,0" Command="{Binding SelectCommand}">
                                                             <StackPanel Orientation="Vertical">
                                                                 <TextBlock
-                        FontSize="36"
-                        FontWeight="SemiBold"
-                        Text="{Binding Name}"
-                        TextTrimming="CharacterEllipsis" />
+                                                                    FontSize="36"
+                                                                    FontWeight="SemiBold"
+                                                                    Text="{Binding Name}"
+                                                                    TextTrimming="CharacterEllipsis" />
 
-                                                                <Grid Margin="0,4,0,0" Width="700">
+                                                                <Grid Width="700" Margin="0,4,0,0">
                                                                     <Grid.ColumnDefinitions>
                                                                         <ColumnDefinition Width="64" />
                                                                         <ColumnDefinition Width="*" />
                                                                     </Grid.ColumnDefinitions>
 
-                                                                    <!-- Install Size Text -->
+                                                                    <!--  Install Size Text  -->
                                                                     <TextBlock
-                            Grid.Column="0"
-                            FontSize="16"
-                            Opacity="0.75"
-                            Text="{Binding InstallSizeString}"
-                            VerticalAlignment="Center"
-                            Margin="0,0,8,0" />
+                                                                        Grid.Column="0"
+                                                                        Margin="0,0,8,0"
+                                                                        VerticalAlignment="Center"
+                                                                        FontSize="16"
+                                                                        Opacity="0.75"
+                                                                        Text="{Binding InstallSizeString}" />
 
-                                                                    <!-- Overlayed Progress Bars -->
+                                                                    <!--  Overlayed Progress Bars  -->
                                                                     <Grid Grid.Column="1" VerticalAlignment="Center">
-                                                                        <!-- Background Progress Bar (Total Disk Size) -->
+                                                                        <!--  Background Progress Bar (Total Disk Size)  -->
                                                                         <ProgressBar
-                                                            Height="24"
-                                Style="{StaticResource BarRound12}"
-                                Maximum="100"
-            Value="{PluginSettings Plugin=MoData, Path=SelectedDisk.UsedPercentage}"
-                                Background="Transparent"
-                                Foreground="#60808080" />
+                                                                            Height="24"
+                                                                            Background="Transparent"
+                                                                            Foreground="#60808080"
+                                                                            Maximum="100"
+                                                                            Style="{StaticResource BarRound12}"
+                                                                            Value="{PluginSettings Plugin=MoData,
+                                                                                                   Path=SelectedDisk.UsedPercentage}" />
 
-                                                                        <!-- Foreground Progress Bar (Game Usage) -->
+                                                                        <!--  Foreground Progress Bar (Game Usage)  -->
                                                                         <ProgressBar
-                                                            Height="24"
-                                Style="{StaticResource BarRound12}"
-                                Maximum="{PluginSettings Plugin=MoData, Path=SelectedDisk.TotalSpace}"
-                                Value="{Binding InstallSize}"
-                                Background="Transparent"
-                                Foreground="{DynamicResource SuccessBrush}" />
+                                                                            Height="24"
+                                                                            Background="Transparent"
+                                                                            Foreground="{DynamicResource SuccessBrush}"
+                                                                            Maximum="{PluginSettings Plugin=MoData,
+                                                                                                     Path=SelectedDisk.TotalSpace}"
+                                                                            Style="{StaticResource BarRound12}"
+                                                                            Value="{Binding InstallSize}" />
                                                                     </Grid>
                                                                 </Grid>
                                                             </StackPanel>
