@@ -37,7 +37,7 @@
                                     Direction="315"
                                     Opacity="0.5"
                                     ShadowDepth="5"
-                                    Color="Black" />
+                                    Color="{DynamicResource ShadowColor}" />
                             </Border.Effect>
                             <Border.Triggers>
                                 <!--  Fade in animation on load  -->
@@ -538,7 +538,7 @@
                                     Direction="315"
                                     Opacity="0.5"
                                     ShadowDepth="5"
-                                    Color="Black" />
+                                    Color="{DynamicResource ShadowColor}" />
                             </Border.Effect>
                             <Border.Triggers>
                                 <!--  Fade in animation on load  -->
@@ -639,7 +639,7 @@
                                                 Opacity="1"
                                                 RenderingBias="Quality"
                                                 ShadowDepth="2"
-                                                Color="Black" />
+                                                Color="{DynamicResource ShadowColor}" />
                                         </TextBlock.Effect>
                                     </TextBlock>
 
@@ -748,7 +748,7 @@
                                     Direction="315"
                                     Opacity="0.5"
                                     ShadowDepth="5"
-                                    Color="Black" />
+                                    Color="{DynamicResource ShadowColor}" />
                             </Border.Effect>
                             <Border.Triggers>
                                 <!--  Fade in animation on load  -->
@@ -1419,7 +1419,7 @@
                                             Direction="315"
                                             Opacity="0.5"
                                             ShadowDepth="5"
-                                            Color="Black" />
+                                            Color="{DynamicResource ShadowColor}" />
                                     </Border.Effect>
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -1560,7 +1560,7 @@
                                             Direction="315"
                                             Opacity="0.9"
                                             ShadowDepth="0"
-                                            Color="Black" />
+                                            Color="{DynamicResource ShadowColor}" />
                                     </Border.Effect>
                                     <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
                                         <!--  Details  -->
@@ -1683,7 +1683,7 @@
                                             Direction="315"
                                             Opacity="0.5"
                                             ShadowDepth="5"
-                                            Color="Black" />
+                                            Color="{DynamicResource ShadowColor}" />
                                     </Border.Effect>
                                     <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
                                         <TextBlock
@@ -1718,7 +1718,7 @@
                                                 Direction="315"
                                                 Opacity="0.5"
                                                 ShadowDepth="5"
-                                                Color="Black" />
+                                                Color="{DynamicResource ShadowColor}" />
                                         </Border.Effect>
                                         <StackPanel
                                             Margin="0,0,0,0"
@@ -1751,7 +1751,7 @@
                                                 Direction="315"
                                                 Opacity="0.5"
                                                 ShadowDepth="5"
-                                                Color="Black" />
+                                                Color="{DynamicResource ShadowColor}" />
                                         </Border.Effect>
                                         <TextBlock
                                             HorizontalAlignment="Center"
@@ -1784,7 +1784,7 @@
                                             Direction="315"
                                             Opacity="0.9"
                                             ShadowDepth="0"
-                                            Color="Black" />
+                                            Color="{DynamicResource ShadowColor}" />
                                     </ButtonEx.Effect>
                                     <Grid
                                         Height="76"
@@ -1852,7 +1852,7 @@
                                             Direction="315"
                                             Opacity="0.9"
                                             ShadowDepth="0"
-                                            Color="Black" />
+                                            Color="{DynamicResource ShadowColor}" />
                                     </ButtonEx.Effect>
                                     <StackPanel
                                         Height="76"
@@ -1865,7 +1865,7 @@
                                                 Direction="315"
                                                 Opacity="0.9"
                                                 ShadowDepth="0"
-                                                Color="Black" />
+                                                Color="{DynamicResource ShadowColor}" />
                                         </StackPanel.Effect>-->
                                         <Grid>
                                             <TextBlock

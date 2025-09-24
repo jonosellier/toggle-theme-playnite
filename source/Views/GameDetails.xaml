@@ -524,7 +524,7 @@
                                     Direction="315"
                                     Opacity="0.75"
                                     ShadowDepth="0"
-                                    Color="Black" />
+                                    Color="{DynamicResource ShadowColor}" />
                             </ButtonEx.Effect>
                             <TextBlock
                                 Height="54"
@@ -565,7 +565,7 @@
                                     Direction="315"
                                     Opacity="0.5"
                                     ShadowDepth="5"
-                                    Color="Black" />
+                                    Color="{DynamicResource ShadowColor}" />
                             </Border.Effect>
                         </Border>
 
@@ -624,7 +624,7 @@
                                             Opacity="1"
                                             RenderingBias="Quality"
                                             ShadowDepth="2"
-                                            Color="Black" />
+                                            Color="{DynamicResource ShadowColor}" />
                                     </TextBlock.Effect>
                                 </TextBlock>
                             </StackPanel>

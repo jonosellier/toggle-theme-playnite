@@ -117,7 +117,7 @@
                                         Opacity="0.9"
                                         RenderingBias="Quality"
                                         ShadowDepth="0"
-                                        Color="Black" />
+                                        Color="{DynamicResource ShadowColor}" />
                                 </TextBlock.Effect>
                             </TextBlock>
                         </Grid>

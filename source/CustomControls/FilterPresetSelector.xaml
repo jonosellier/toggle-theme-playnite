@@ -112,7 +112,7 @@
                                                     Direction="315"
                                                     Opacity="0.5"
                                                     ShadowDepth="3"
-                                                    Color="Black" />
+                                                    Color="{DynamicResource ShadowColor}" />
                                             </Image.Effect>
                                         </Image>
                                     </Grid>

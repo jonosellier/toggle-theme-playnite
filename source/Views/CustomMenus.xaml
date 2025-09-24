@@ -35,7 +35,7 @@
                                         Direction="315"
                                         Opacity="0.5"
                                         ShadowDepth="12"
-                                        Color="Black" />
+                                        Color="{DynamicResource ShadowColor}" />
                         </Setter.Value>
                 </Setter>
                 <Setter Property="Width" Value="400" />
@@ -77,7 +77,7 @@
                                         Direction="315"
                                         Opacity="0.5"
                                         ShadowDepth="12"
-                                        Color="Black" />
+                                        Color="{DynamicResource ShadowColor}" />
                         </Setter.Value>
                 </Setter>
                 <Setter Property="Width" Value="400" />
@@ -129,7 +129,7 @@
                                         Direction="315"
                                         Opacity="0.5"
                                         ShadowDepth="12"
-                                        Color="Black" />
+                                        Color="{DynamicResource ShadowColor}" />
                         </Setter.Value>
                 </Setter>
                 <Setter Property="Width" Value="400" />

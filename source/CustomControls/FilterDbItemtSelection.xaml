@@ -19,7 +19,7 @@
                                 Direction="315"
                                 Opacity="0.5"
                                 ShadowDepth="5"
-                                Color="Black" />
+                                Color="{DynamicResource ShadowColor}" />
                         </Border.Effect>
                         <DockPanel x:Name="PART_MenuHost">
                             <ButtonEx

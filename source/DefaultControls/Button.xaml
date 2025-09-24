@@ -37,7 +37,7 @@
                                                                         Direction="315"
                                                                         Opacity="0.5"
                                                                         ShadowDepth="5"
-                                                                        Color="Black" />
+                                                                        Color="{DynamicResource ShadowColor}" />
                                                         </Border.Effect>
                                                 </Border>
                                                 <TextBlock
@@ -191,7 +191,7 @@
                                                                         Direction="315"
                                                                         Opacity="0.5"
                                                                         ShadowDepth="5"
-                                                                        Color="Black" />
+                                                                        Color="{DynamicResource ShadowColor}" />
                                                         </Border.Effect>
                                                 </Border>
                                                 <Border
@@ -209,7 +209,7 @@
                                                                         Direction="315"
                                                                         Opacity="0.5"
                                                                         ShadowDepth="8"
-                                                                        Color="Black" />
+                                                                        Color="{DynamicResource ShadowColor}" />
                                                         </Border.Effect>
                                                 </Border>
                                                 <TextBlock
@@ -266,7 +266,7 @@
                                                                         Direction="315"
                                                                         Opacity="0.5"
                                                                         ShadowDepth="5"
-                                                                        Color="Black" />
+                                                                        Color="{DynamicResource ShadowColor}" />
                                                         </Border.Effect>
                                                 </Border>
 
@@ -285,7 +285,7 @@
                                                                         Direction="315"
                                                                         Opacity="0.5"
                                                                         ShadowDepth="8"
-                                                                        Color="Black" />
+                                                                        Color="{DynamicResource ShadowColor}" />
                                                         </Border.Effect>
                                                 </Border>
                                                 <TextBlock
@@ -341,7 +341,7 @@
                                                                         Direction="315"
                                                                         Opacity="0.5"
                                                                         ShadowDepth="5"
-                                                                        Color="Black" />
+                                                                        Color="{DynamicResource ShadowColor}" />
                                                         </Border.Effect>
                                                 </Border>
 
@@ -360,7 +360,7 @@
                                                                         Direction="315"
                                                                         Opacity="0.5"
                                                                         ShadowDepth="8"
-                                                                        Color="Black" />
+                                                                        Color="{DynamicResource ShadowColor}" />
                                                         </Border.Effect>
                                                 </Border>
                                                 <TextBlock
@@ -425,7 +425,7 @@
                                                                         Direction="315"
                                                                         Opacity="0.5"
                                                                         ShadowDepth="8"
-                                                                        Color="Black" />
+                                                                        Color="{DynamicResource ShadowColor}" />
                                                         </Border.Effect>
                                                 </Border>
                                                 <TextBlock

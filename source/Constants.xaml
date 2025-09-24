@@ -10,15 +10,17 @@
         <Color x:Key="BlackColor">#FF000000</Color>
         <Color x:Key="WhiteColor">#FFFFFFFF</Color>
 
-        <Color x:Key="SelectionLightColor">#FF606060</Color>
-        <Color x:Key="OverlayColor">#BB000000</Color>
+        <Color x:Key="ShadowColor">#FFFFFF</Color>
 
-        <Color x:Key="ControlBackgroundColor">#FF3A3A3A</Color>
-        <Color x:Key="ControlBackgroundColorDark">#FF2A2A2A</Color>
+        <Color x:Key="SelectionLightColor">#FFB0B0B0</Color>
+        <Color x:Key="OverlayColor">#88FFFFFF</Color>
 
-        <Color x:Key="TextColor">#FFEBEBEB</Color>
-        <Color x:Key="TextColorDark">#FF757575</Color>
-        <Color x:Key="BorderColor">#FF444444</Color>
+        <Color x:Key="ControlBackgroundColor">#FFF5F5F5</Color>
+        <Color x:Key="ControlBackgroundColorDark">#FFEEEEEE</Color>
+
+        <Color x:Key="TextColor">#FF1A1A1A</Color>
+        <Color x:Key="TextColorDark">#FF666666</Color>
+        <Color x:Key="BorderColor">#FFCCCCCC</Color>
 
         <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
         <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />
@@ -51,15 +53,15 @@
                 <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
         </Style>
 
-        <SolidColorBrush x:Key="MainBackgourndBrush" Color="#FF0F0F0F" />
+        <SolidColorBrush x:Key="MainBackgourndBrush" Color="#FFD0D0D0" />
 
-        <SolidColorBrush x:Key="TopBarBackgroundBrush" Color="#BF2A2A2A" />
+        <SolidColorBrush x:Key="TopBarBackgroundBrush" Color="#BFEEEEEE" />
 
-        <SolidColorBrush x:Key="BottomBarBackgroundBrush" Color="#FF2A2A2A" />
+        <SolidColorBrush x:Key="BottomBarBackgroundBrush" Color="#FFEEEEEE" />
 
         <SolidColorBrush x:Key="OverlayMenuBackgroundBrush" Color="{DynamicResource ControlBackgroundColor}" />
 
-        <SolidColorBrush x:Key="GameDetailsBackgroundBrush" Color="#F22A2A2A" />
+        <SolidColorBrush x:Key="GameDetailsBackgroundBrush" Color="#F2EEEEEE" />
 
         <SolidColorBrush x:Key="WarningBrush" Color="#ef4444" />
         <SolidColorBrush x:Key="AlertBrush" Color="#eab308" />
