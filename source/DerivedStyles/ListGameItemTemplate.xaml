@@ -24,7 +24,8 @@
                             StretchDirection="Both" />
                         <Border
                             x:Name="BorderDarken"
-                            Background="#AA000000"
+                            Background="{DynamicResource ControlBackgroundBrush}"
+                            Opacity="0.5"
                             Visibility="Collapsed" />
                         <Border
                             x:Name="InGame"
@@ -32,7 +33,7 @@
                             Padding="8,4"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Bottom"
-                            Background="#AA000000"
+                            Background="{DynamicResource ControlBackgroundBrush}"
                             BorderBrush="{DynamicResource DefaultBorderBrush}"
                             BorderThickness="1"
                             CornerRadius="8"

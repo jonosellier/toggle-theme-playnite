@@ -20,7 +20,7 @@
 
         <Color x:Key="TextColor">#FF1A1A1A</Color>
         <Color x:Key="TextColorDark">#FF666666</Color>
-        <Color x:Key="BorderColor">#FFCCCCCC</Color>
+        <Color x:Key="BorderColor">#FFA0A0A0</Color>
 
         <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
         <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />

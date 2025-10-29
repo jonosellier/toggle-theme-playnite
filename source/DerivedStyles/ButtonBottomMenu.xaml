@@ -29,7 +29,7 @@
                                 FontFamily="{DynamicResource FontDefault}"
                                 FontSize="24"
                                 FontWeight="SemiBold"
-                                Foreground="{DynamicResource TextBrush}"
+                                Foreground="#F0F0F0"
                                 Style="{DynamicResource TextBlockBaseStyle}"
                                 Typography.Capitals="AllSmallCaps">
                                 <ContentPresenter />

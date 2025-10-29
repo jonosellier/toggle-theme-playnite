@@ -1560,7 +1560,7 @@
                                             Direction="315"
                                             Opacity="0.9"
                                             ShadowDepth="0"
-                                            Color="{DynamicResource ShadowColor}" />
+                                            Color="#242424" />
                                     </Border.Effect>
                                     <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
                                         <!--  Details  -->
