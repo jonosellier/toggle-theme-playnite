@@ -114,4 +114,9 @@
         <Color x:Key="RareGlow">#ffdb4d</Color>
         <Color x:Key="NoCommonGlow">#e6ebf0</Color>
 
+        <!-- HowLongToBeat Colors -->
+        <SolidColorBrush x:Key="HLTBMainStoryBrush" Color="#6ab4f1" />
+        <SolidColorBrush x:Key="HLTBMainExtraBrush" Color="#8be59d" />
+        <SolidColorBrush x:Key="HLTBCompletionistBrush" Color="#ec8a83" />
+
 </ResourceDictionary>

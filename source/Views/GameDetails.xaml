@@ -551,6 +551,101 @@
                             </ContentControl.Style>
                         </ContentControl>
 
+                        <!-- HowLongToBeat entry -->
+                        <Border
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Margin="0,24,0,0"
+                            Background="{DynamicResource GameDetailsBackgroundBrush}"
+                            BorderBrush="{DynamicResource DefaultBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="16">
+                            
+                            <Border.Effect>
+                                <DropShadowEffect
+                                    BlurRadius="10"
+                                    Direction="315"
+                                    Opacity="0.5"
+                                    ShadowDepth="5"
+                                    Color="Black" />
+                            </Border.Effect>
+
+                            <StackPanel Margin="32,32,32,22" Orientation="Horizontal">
+                                <StackPanel.Style>
+                                    <Style TargetType="StackPanel">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{PluginSettings Plugin=HowLongToBeat, Path=HasData}" Value="False">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{PluginSettings Plugin=ThemeOptions, Path=Options[HowLongToBeat]}" Value="False">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </StackPanel.Style>
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    Opacity="0.75"
+                                    Style="{StaticResource FluentIconStyle}"
+                                    Text="&#xe916;" />
+                                <StackPanel Margin="0,0,48,0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock
+                                            FontFamily="{DynamicResource FontDefaultBold}"
+                                            Style="{DynamicResource TextBlockBaseStyle}"
+                                            Foreground="{DynamicResource HLTBMainStoryBrush}"
+                                            Text="{PluginSettings Plugin=HowLongToBeat,
+                                                                    Path=MainStoryFormat,
+                                                                    FallbackValue='-'}" />
+                                    </StackPanel>
+                                    <TextBlock
+                                        Margin="0,0,0,10"
+                                        FontSize="22"
+                                        Opacity="0.75"
+                                        Style="{DynamicResource TextBlockBaseStyle}"
+                                        Text="{DynamicResource LOCHowLongToBeatMainStory}" />
+                                </StackPanel>
+                                <StackPanel Margin="0,0,48,0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock
+                                            FontFamily="{DynamicResource FontDefaultBold}"
+                                            Style="{DynamicResource TextBlockBaseStyle}"
+                                            Foreground="{DynamicResource HLTBMainExtraBrush}"
+                                            Text="{PluginSettings Plugin=HowLongToBeat,
+                                                                    Path=MainExtraFormat,
+                                                                    FallbackValue='-'}" />
+                                    </StackPanel>
+                                    <TextBlock
+                                        Margin="0,0,0,10"
+                                        FontSize="22"
+                                        Opacity="0.75"
+                                        Style="{DynamicResource TextBlockBaseStyle}"
+                                        Text="{DynamicResource LOCHowLongToBeatMainExtra}" />
+                                </StackPanel>
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock
+                                            FontFamily="{DynamicResource FontDefaultBold}"
+                                            Style="{DynamicResource TextBlockBaseStyle}"
+                                            Foreground="{DynamicResource HLTBCompletionistBrush}"
+                                            Text="{PluginSettings Plugin=HowLongToBeat,
+                                                                    Path=CompletionistFormat,
+                                                                    FallbackValue='-'}" />
+                                    </StackPanel>
+                                    <TextBlock
+                                        Margin="0,0,0,10"
+                                        FontSize="22"
+                                        Opacity="0.75"
+                                        Style="{DynamicResource TextBlockBaseStyle}"
+                                        Text="{DynamicResource LOCHowLongToBeatCompletionist}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+
                         <Border
                             Grid.Row="1"
                             Grid.Column="1"

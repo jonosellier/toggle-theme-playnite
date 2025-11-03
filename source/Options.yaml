@@ -231,3 +231,7 @@ Variables:
     Title: Achievements (Requires SuccessStory)
     Type: Boolean
     Default: true
+  HowLongToBeat:
+    Title: HowLongToBeat
+    Type: Boolean
+    Default: true
