@@ -355,13 +355,31 @@
                             <Grid>
                                 <!--  Features Image  -->
                                 <Border
-                                    Width="48"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Stretch"
+                                    CornerRadius="12,12,12,12">
+                                       <Border.Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Playtime}" Value="0">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+                                    <Image
+                                        Source="{ThemeFile Icons/Filter/Shrink Wrap.png}"
+                                 Stretch="Fill"/>
+                                </Border>
+                                <Border
+                                    Width="38"
                                     Height="36"
-                                    Margin="40,0,0,0"
-                                    Padding="10,0,0,0"
+                                    Margin="0,51,0,0"
+                                    Padding="0,0,0,0"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Top"
-                                    Background="{DynamicResource TextBrush}"
+                                    Background="#05aef8"
                                     CornerRadius="0,0,12,0">
                                     <Border.Style>
                                         <Style TargetType="Border">
@@ -376,7 +394,55 @@
                                     <Image
                                         Width="36"
                                         Height="36"
-                                        Source="{ThemeFile Icons/Filter/Default/Steam Family Sharing.png}" />
+                                        Source="{ThemeFile Icons/Filter/Steam Family Sharing.png}" />
+                                </Border>
+                                <Border
+                                    Width="48"
+                                    Height="36"
+                                    Margin="40,0,0,0"
+                                    Padding="10,0,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Background="#00bb60"
+                                    CornerRadius="0,0,12,0">
+                                    <Border.Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Completed">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+                                    <Image
+                                        Width="35"
+                                        Height="35"
+                                        Source="{ThemeFile Icons/Filter/Completed.png}" />
+                                </Border>
+                                <Border
+                                    Width="40"
+                                    Height="40"
+                                    Margin="10,0,0,0"
+                                    Padding="1,0,0,0"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
+                                    Background="#f44336"
+                                    CornerRadius="0,12,0,12">
+                                    <Border.Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Favorite}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+                                    <Image
+                                        Width="25"
+                                        Height="25"
+                                        Source="{ThemeFile Icons/Filter/Favorites.png}" />
                                 </Border>
 
                                 <!--  Library Image (default)  -->
